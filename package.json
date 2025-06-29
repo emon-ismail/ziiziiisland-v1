@@ -1,0 +1,65 @@
+{
+  "name": "zii-zii-island-website",
+  "version": "1.0.0",
+  "description": "Modern, responsive website for Zii Zii Island - a family entertainment center",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "build": "echo 'No build process required - static site'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "family-entertainment",
+    "play-zone",
+    "birthday-party",
+    "responsive-design",
+    "bootstrap5",
+    "aos-animations",
+    "modern-web",
+    "bangladesh",
+    "chittagong"
+  ],
+  "author": "Zii Zii Island",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ziiziiisland/website.git"
+  },
+  "homepage": "http://ziiziiisland.com/",
+  "bugs": {
+    "url": "http://ziiziiisland.com/contact",
+    "email": "info@ziiziiisland.com"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {},
+  "optionalDependencies": {},
+  "peerDependencies": {},
+  "bundledDependencies": [],
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "private": true,
+  "publishConfig": {
+    "access": "restricted"
+  }
+} 

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zii Zii Island - Where Fun Begins!</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Zii Zii Island - The ultimate family entertainment destination in Chittagong. Play zones, birthday parties, delicious food, and unforgettable memories!">
+    <meta name="keywords" content="family entertainment, play zone, birthday party, kids activities, Chittagong, Bangladesh">
+    <meta name="author" content="Zii Zii Island">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Zii Zii Island - Where Fun Begins!">
+    <meta property="og:description" content="The ultimate family entertainment destination in Chittagong">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="http://ziiziiisland.com/">
+    <meta property="og:type" content="website">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-3">Loading Zii Zii Island...</p>
+    </div>
+
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <!-- Include Hero Section -->
+    <div id="hero-container"></div>
+
+    <!-- Include Play Zones Section -->
+    <div id="playzones-container"></div>
+
+    <!-- Include Packages Section -->
+    <div id="packages-container"></div>
+
+    <!-- Include Menu Section -->
+    <div id="menu-container"></div>
+
+    <!-- Include Gallery Section -->
+    <div id="gallery-container"></div>
+
+    <!-- Include FAQ Section -->
+    <div id="faq-container"></div>
+
+    <!-- Include Contact Section -->
+    <div id="contact-container"></div>
+
+    <!-- Include Branches Section -->
+    <div id="branches-container"></div>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    
+    <!-- Load Modular Sections -->
+    <script>
+        // Function to load HTML content
+        async function loadSection(containerId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+                return true;
+            } catch (error) {
+                console.error(`Error loading ${filePath}:`, error);
+                return false;
+            }
+        }
+
+        // Function to hide loading spinner
+        function hideLoadingSpinner() {
+            const spinner = document.getElementById('loading-spinner');
+            if (spinner) {
+                spinner.style.opacity = '0';
+                setTimeout(() => {
+                    spinner.style.display = 'none';
+                }, 500);
+            }
+        }
+
+        // Load all sections when DOM is ready
+        document.addEventListener('DOMContentLoaded', async function() {
+            const sections = [
+                { id: 'header-container', file: 'header.html' },
+                { id: 'hero-container', file: 'hero.html' },
+                { id: 'playzones-container', file: 'playzones.html' },
+                // { id: 'packages-container', file: 'packages.html' },
+                { id: 'menu-container', file: 'menu.html' },
+                { id: 'gallery-container', file: 'gallery.html' },
+                { id: 'faq-container', file: 'faq.html' },
+                { id: 'contact-container', file: 'contact.html' },
+                { id: 'branches-container', file: 'branches.html' },
+                { id: 'footer-container', file: 'footer.html' }
+            ];
+
+            // Load all sections
+            const loadPromises = sections.map(section => 
+                loadSection(section.id, section.file)
+            );
+
+            try {
+                await Promise.all(loadPromises);
+                console.log('All sections loaded successfully');
+                
+                // Hide loading spinner
+                hideLoadingSpinner();
+                
+                // Initialize website after all sections are loaded
+                if (typeof initializeWebsite === 'function') {
+                    initializeWebsite();
+                }
+            } catch (error) {
+                console.error('Error loading sections:', error);
+                hideLoadingSpinner();
+            }
+        });
+    </script>
+
+    <style>
+        .loading-spinner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff6f61 0%, #5a4fcf 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner p {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+    </style>
+</body>
+</html> 

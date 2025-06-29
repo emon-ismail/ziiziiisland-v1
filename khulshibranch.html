@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khulshi Branch - Zii Zii Island</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Visit Zii Zii Island Khulshi Branch - The ultimate family entertainment destination in Khulshi, Chittagong. Play zones, birthday parties, and delicious food!">
+    <meta name="keywords" content="Zii Zii Island Khulshi, family entertainment Khulshi, play zone Chittagong, birthday party Khulshi">
+    <meta name="author" content="Zii Zii Island">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="logo.png" alt="Zii Zii Island Logo" class="logo-img me-2" style="height: 40px; width: auto;">
+                Zii Zii Island
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#play-zones">Play Zones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#packages">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Branches
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="khulshibranch.html" target="_blank">Khulshi Branch</a></li>
+                            <li><a class="dropdown-item" href="bohaddarhatbranch.html" target="_blank">Bohaddarhat Branch</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn btn-primary btn-pulse" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                    <i class="fas fa-calendar-check me-2"></i>Book Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Branch Hero Section -->
+    <section class="branch-hero-section d-flex align-items-center" style="margin-top: 80px;">
+        <div class="container">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <h1 class="hero-title gradient-text mb-4">
+                        Khulshi Branch
+                    </h1>
+                    <p class="hero-subtitle mb-4">
+                        Experience the magic of Zii Zii Island at our flagship Khulshi location! 
+                        Featuring state-of-the-art play zones, delicious dining, and unforgettable birthday celebrations.
+                    </p>
+                    <div class="branch-highlights mb-4">
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                            <span>123 Main Street, Khulshi, Chittagong</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-phone text-primary me-2"></i>
+                            <span>+880 1234-567890</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            <span>Daily: 10:00 AM - 10:00 PM</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg me-3" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fas fa-calendar-check me-2"></i>Book Your Visit
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg" data-aos="zoom-in" data-aos-delay="600">
+                        <i class="fas fa-directions me-2"></i>Get Directions
+                    </button>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Khulshi Branch - Zii Zii Island" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branch Features -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <h2 class="section-title gradient-text mb-3">Branch Features</h2>
+                    <p class="section-subtitle">Discover what makes our Khulshi branch special!</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-swimming-pool"></i>
+                        </div>
+                        <h4>Ball Pool Arena</h4>
+                        <p>Our largest ball pool with over 50,000 colorful balls!</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>Family Restaurant</h4>
+                        <p>Full-service restaurant with kid-friendly menu options.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <h4>Party Rooms</h4>
+                        <p>3 themed party rooms for unforgettable celebrations.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-parking"></i>
+                        </div>
+                        <h4>Free Parking</h4>
+                        <p>Convenient parking for up to 50 vehicles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branch Gallery -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <h2 class="section-title gradient-text mb-3">Branch Gallery</h2>
+                    <p class="section-subtitle">Take a virtual tour of our Khulshi branch!</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Khulshi Branch - Play Area" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Khulshi Branch - Restaurant" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Khulshi Branch - Entrance" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Khulshi Branch - Ball Pool" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Khulshi Branch - Party Room" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Khulshi Branch - Outdoor Area" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branch Information -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2 class="section-title gradient-text mb-4">Branch Information</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5><i class="fas fa-map-marker-alt text-primary me-2"></i>Location</h5>
+                                <p>123 Main Street, Khulshi<br>Chittagong, Bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5><i class="fas fa-phone text-primary me-2"></i>Contact</h5>
+                                <p>Phone: +880 1234-567890<br>Email: khulshi@ziiziiisland.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5><i class="fas fa-clock text-primary me-2"></i>Hours</h5>
+                                <p>Monday - Sunday<br>10:00 AM - 10:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-card">
+                                <h5><i class="fas fa-car text-primary me-2"></i>Parking</h5>
+                                <p>Free parking available<br>Capacity: 50 vehicles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="quick-actions">
+                        <h4 class="mb-4">Quick Actions</h4>
+                        <button class="btn btn-primary w-100 mb-3">
+                            <i class="fas fa-calendar-check me-2"></i>Book Now
+                        </button>
+                        <button class="btn btn-outline-primary w-100 mb-3">
+                            <i class="fas fa-directions me-2"></i>Get Directions
+                        </button>
+                        <button class="btn btn-outline-primary w-100 mb-3">
+                            <i class="fas fa-phone me-2"></i>Call Us
+                        </button>
+                        <button class="btn btn-outline-primary w-100">
+                            <i class="fas fa-share me-2"></i>Share Location
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <h2 class="section-title gradient-text mb-3">Find Us</h2>
+                    <p class="section-subtitle">Located in the heart of Khulshi, easily accessible from all parts of Chittagong</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12" data-aos="zoom-in">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.5!2d91.7833!3d22.3419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDIwJzMwLjgiTiA5McKwNDcnMDAuMCJF!5e0!3m2!1sen!2sbd!4v1234567890" 
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="mb-3">
+                        <img src="logo.png" alt="Zii Zii Island Logo" class="logo-img me-2" style="height: 35px; width: auto;">
+                        Zii Zii Island
+                    </h5>
+                    <p>Creating magical moments and unforgettable memories for families since 2010. Where fun begins and dreams come true!</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#play-zones">Play Zones</a></li>
+                        <li><a href="index.html#packages">Packages</a></li>
+                        <li><a href="index.html#menu">Menu</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Branches</h6>
+                    <div class="branch-info mb-3">
+                        <strong>Khulshi Branch</strong><br>
+                        123 Main Street, Khulshi<br>
+                        Chittagong, Bangladesh
+                    </div>
+                    <div class="branch-info">
+                        <strong>Bohaddarhat Branch</strong><br>
+                        456 Ocean Road, Bohaddarhat<br>
+                        Chittagong, Bangladesh
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h6 class="mb-3">Contact Info</h6>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone me-2"></i>+880 1234-567890</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@ziiziiisland.com</p>
+                        <p><i class="fas fa-clock me-2"></i>Daily: 10:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Zii Zii Island. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="btn btn-outline-light btn-sm">
+                        <i class="fas fa-arrow-up me-1"></i>Back to Top
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" alt="Gallery Image" class="img-fluid" id="modalImage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+            offset: 100
+        });
+
+        // Gallery modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modalImage = document.getElementById('modalImage');
+            
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    if (img && modalImage) {
+                        modalImage.src = img.src;
+                        modalImage.alt = img.alt;
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .branch-hero-section {
+            background: var(--gradient-primary);
+            min-height: 75vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .branch-hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .branch-hero-section .hero-title {
+            color: white;
+        }
+
+        .branch-hero-section .hero-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .highlight-item {
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .info-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            height: 100%;
+        }
+
+        .info-card h5 {
+            color: var(--text-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .quick-actions {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .min-vh-75 {
+            min-height: 75vh;
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,158 @@
+<!-- Footer -->
+<footer class="footer bg-dark text-white py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="mb-3">
+                    <img src="logo.png" alt="Zii Zii Island Logo" class="logo-img me-2" style="height: 35px; width: auto;">
+                    Zii Zii Island
+                </h5>
+                <p>Creating magical moments and unforgettable memories for families since 2010. Where fun begins and dreams come true!</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-2">
+                <h6 class="mb-3">Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#play-zones">Play Zones</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3">
+                <h6 class="mb-3">Branches</h6>
+                <div class="branch-info mb-3">
+                    <strong><a href="khulshibranch.html" target="_blank" class="text-white">Khulshi Branch</a></strong><br>
+                    123 Main Street, Khulshi<br>
+                    Chittagong, Bangladesh
+                </div>
+                <div class="branch-info">
+                    <strong><a href="bohaddarhatbranch.html" target="_blank" class="text-white">Bohaddarhat Branch</a></strong><br>
+                    456 Ocean Road, Bohaddarhat<br>
+                    Chittagong, Bangladesh
+                </div>
+            </div>
+            
+            <div class="col-lg-3">
+                <h6 class="mb-3">Contact Info</h6>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone me-2"></i>+880 1234-567890</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@ziiziiisland.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Daily: 10:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="my-4">
+        
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2024 Zii Zii Island. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#home" class="btn btn-outline-light btn-sm">
+                    <i class="fas fa-arrow-up me-1"></i>Back to Top
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Book Now Button (Mobile) -->
+<div class="floating-book-btn d-lg-none">
+    <button class="btn btn-primary btn-pulse" data-bs-toggle="modal" data-bs-target="#bookingModal">
+        <i class="fas fa-calendar-check"></i>
+    </button>
+</div>
+
+<!-- Booking Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Book Your Visit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Date</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Time</label>
+                            <select class="form-select" required>
+                                <option value="">Select Time</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Branch</label>
+                            <select class="form-select" required>
+                                <option value="">Select Branch</option>
+                                <option value="khulshi">Khulshi Branch</option>
+                                <option value="bohaddarhat">Bohaddarhat Branch</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Package</label>
+                            <select class="form-select" required>
+                                <option value="">Select Package</option>
+                                <option value="family">Family Fun</option>
+                                <option value="birthday">Birthday Bash</option>
+                                <option value="premium">Premium Party</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Number of People</label>
+                            <input type="number" class="form-control" min="1" max="20" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Special Requests</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Confirm Booking</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" alt="Gallery Image" class="img-fluid" id="modalImage">
+            </div>
+        </div>
+    </div>
+</div> 
