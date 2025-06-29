@@ -273,20 +273,20 @@ function initBackToTop() {
 }
 
 // ===== PARALLAX EFFECTS =====
-function initParallaxEffects() {
-    const parallaxElements = document.querySelectorAll('.hero-section');
+// function initParallaxEffects() {
+//     const parallaxElements = document.querySelectorAll('.hero-section');
     
-    if (parallaxElements.length === 0) return;
+//     if (parallaxElements.length === 0) return;
     
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
+//     window.addEventListener('scroll', function() {
+//         const scrolled = window.pageYOffset;
         
-        parallaxElements.forEach(element => {
-            const rate = scrolled * -0.5;
-            element.style.transform = `translateY(${rate}px)`;
-        });
-    });
-}
+//         parallaxElements.forEach(element => {
+//             const rate = scrolled * -0.5;
+//             element.style.transform = `translateY(${rate}px)`;
+//         });
+//     });
+// }
 
 // ===== BRANCH SELECTION =====
 function initBranchSelection() {
