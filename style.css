@@ -1953,4 +1953,43 @@ html {
     50% {
         transform: translateY(-15px) rotate(5deg);
     }
+}
+
+@media (max-width: 575.98px) {
+    #contact {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    #contact .mb-4, #contact .mb-5 {
+        margin-bottom: 1.2rem !important;
+    }
+    .contact-info, .contact-form {
+        padding: 1rem;
+    }
+    .responsive-map iframe {
+        height: 200px !important;
+    }
+    .contact-item {
+        flex-direction: row;
+        align-items: flex-start;
+        font-size: 0.95rem;
+    }
+    .contact-form .btn {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .floating-book-btn {
+        bottom: 4.5rem;
+        right: 1rem;
+    }
+    #contact, #footer-container {
+        margin-bottom: 3.5rem;
+    }
 } 

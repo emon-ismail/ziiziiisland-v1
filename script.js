@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
 });
 
+// ===== AOS INIT =====
+function isMobile() {
+    return window.innerWidth <= 576;
+}
+
 function initializeWebsite() {
     // Initialize AOS
     if (typeof AOS !== 'undefined') {
@@ -14,7 +19,9 @@ function initializeWebsite() {
             easing: 'ease-in-out',
             once: true,
             mirror: false,
-            offset: 100
+            offset: 100,
+            // Disable AOS on mobile
+            disable: isMobile
         });
     }
 
