@@ -667,4 +667,59 @@ window.ZiiZiiIsland = {
     getCurrentTime,
     isInViewport,
     showBranchSelection
-}; 
+};
+
+// ===== VIDEO MODAL LOGIC =====
+document.addEventListener('DOMContentLoaded', function() {
+    var videoModal = document.getElementById('videoModal');
+    var youtubeVideo = document.getElementById('youtubeVideo');
+    if (videoModal && youtubeVideo) {
+        var videoSrc = youtubeVideo.src;
+        videoModal.addEventListener('show.bs.modal', function () {
+            // Optionally autoplay
+            youtubeVideo.src = videoSrc + (videoSrc.includes('?') ? '&' : '?') + 'autoplay=1';
+        });
+        videoModal.addEventListener('hide.bs.modal', function () {
+            youtubeVideo.src = '';
+        });
+        videoModal.addEventListener('hidden.bs.modal', function () {
+            youtubeVideo.src = videoSrc;
+        });
+    }
+});
+
+// ===== GOOGLE SHEETS BOOKING SUBMISSION =====
+document.addEventListener('DOMContentLoaded', function() {
+  var bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
+      var data = {
+        name: form.querySelector('[name="name"]').value,
+        phone: form.querySelector('[name="phone"]').value,
+        date: form.querySelector('[name="date"]').value,
+        time: form.querySelector('[name="time"]').value,
+        branch: form.querySelector('[name="branch"]').value,
+        package: form.querySelector('[name="package"]').value,
+        people: form.querySelector('[name="people"]').value,
+        requests: form.querySelector('[name="requests"]').value
+      };
+      fetch('https://script.google.com/macros/s/AKfycbwo2Mr1h5tjbu8PSlNdK4_XbQrYdGn5Y9NBnF6BgYBKTzT0dSET8lJ6h33xGxbkp68lFw/exec', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {'Content-Type': 'application/json'}
+      })
+      .then(res => res.json())
+      .then(res => {
+        if (res.result === 'success') {
+          alert('Booking confirmed!');
+          form.reset();
+        } else {
+          alert('There was an error. Please try again.');
+        }
+      })
+      .catch(() => alert('There was an error. Please try again.'));
+    });
+  }
+}); 

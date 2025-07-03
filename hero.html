@@ -10,7 +10,8 @@
     </div>
     
     <div class="container position-relative mt-5 pt-5">
-        <div class="row align-items-center">
+        <!-- Use flex-column-reverse for mobile, flex-row for md+ -->
+        <div class="row align-items-center flex-column-reverse flex-md-row">
             <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay="200">
                 <div class="hero-logo mb-4 mb-md-3 mb-sm-2" data-aos="fade-down" data-aos-delay="100">
                     <div class="logo-container">
@@ -31,32 +32,14 @@
                         delicious food, and unforgettable birthday celebrations!
                     </p>
                     
-                
-                    
                     <div class="hero-buttons">
                         <button class="btn btn-primary btn-lg me-3 mb-2 mb-md-0 hero-btn-primary" data-aos="zoom-in" data-aos-delay="400">
                             <i class="fas fa-rocket me-2"></i>Explore Packages
                             <div class="btn-glow"></div>
                         </button>
-                        <button class="btn btn-outline-primary btn-lg hero-btn-secondary" data-aos="zoom-in" data-aos-delay="600">
+                        <button class="btn btn-outline-primary btn-lg hero-btn-secondary" data-aos="zoom-in" data-aos-delay="600" data-bs-toggle="modal" data-bs-target="#videoModal">
                             <i class="fas fa-play me-2"></i>Watch Video
                         </button>
-                    </div>
-                    
-                    <!-- Hero Stats -->
-                    <div class="hero-stats mt-4 d-none d-md-flex">
-                        <div class="stat-item">
-                            <div class="stat-number">5000+</div>
-                            <div class="stat-label">Happy Kids</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">6</div>
-                            <div class="stat-label">Play Zones</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">2</div>
-                            <div class="stat-label">Branches</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -71,7 +54,7 @@
                     </div>
                     
                     <!-- Floating Elements -->
-                    <div class="floating-elements d-none d-md-block">
+                    <div class="floating-elements ">
                         <div class="floating-element floating-1" data-aos="fade-in" data-aos-delay="800">
                             <i class="fas fa-star"></i>
                         </div>
@@ -99,4 +82,21 @@
         </div>
     </div>
 </section>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="videoModalLabel">Watch Our Video</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe id="youtubeVideo" width="560" height="315" src="https://youtube.com/shorts/m25ECBgaJng?si=N6JKrMn6VTU_jVHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
