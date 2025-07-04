@@ -1,51 +1,95 @@
-<!-- Sticky Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm" id="mainNavbar">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#home">
-            <img src="logo.png" alt="Zii Zii Island Logo" class="logo-img me-2" style="height: 40px; width: auto;">
-            Zii Zii Island
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#play-zones">Play Zones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#packages">Packages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#menu">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallery">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Branches
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="khulshibranch.html" target="_blank">Khulshi Branch</a></li>
-                        <li><a class="dropdown-item" href="bohaddarhatbranch.html" target="_blank">Bohaddarhat Branch</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <button class="btn btn-primary btn-pulse d-none d-lg-inline-block" data-bs-toggle="modal" data-bs-target="#bookingModal">
-                <i class="fas fa-calendar-check me-2"></i>Book Now
-            </button>
-        </div>
+<!-- Bootstrap 5 Responsive Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" style="backdrop-filter: blur(10px); background: rgba(255,255,255,0.95) !important;">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="logo.png" alt="Zii Zii Island Logo" height="40" class="me-2" style="border-radius:8px; box-shadow:0 2px 8px rgba(90,79,207,0.08);">
+      <span class="fw-bold gradient-text" style="font-size:1.3rem;">Zii Zii Island</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#hero-container">Home</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="#playzones-container">Play Zones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#rulesandfaq-container">Rules & FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pricing-container">Packages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#menu-container">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery-container">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#faq-container">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact-container">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#branches-container">Branches</a>
+        </li>
+      </ul>
+      <a href="tel:01404000966" class="btn btn-primary btn-pulse d-none d-lg-inline-block ms-lg-3" style="border-radius:2em; font-weight:700; font-size:1.08em; padding:0.5em 1.6em; background: linear-gradient(90deg, #ffb347 0%, #5a4fcf 100%); border:none; box-shadow:0 2px 8px rgba(90,79,207,0.10);">
+        <i class="fas fa-calendar-check me-2"></i>Book Now
+      </a>
     </div>
-</nav> 
+  </div>
+</nav>
+<style>
+  .navbar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .navbar-nav .nav-link {
+    color: #4f3ca3 !important;
+    font-weight: 600;
+    border-radius: 1.5em;
+    padding: 0.5em 1.2em;
+    margin: 0.2em 0.2em;
+    transition: background 0.18s, color 0.18s;
+  }
+  .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+    background: linear-gradient(90deg, #ffb347 0%, #5a4fcf 100%);
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(90,79,207,0.08);
+  }
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #5a4fcf33;
+  }
+  @media (max-width: 991px) {
+    .navbar-nav {
+      background: rgba(255,255,255,0.98);
+      border-radius: 1.2em;
+      box-shadow: 0 8px 32px 0 rgba(90,79,207,0.10);
+      padding: 1.2em 0.5em 1em 0.5em;
+      margin-top: 0.7em;
+      text-align: center;
+    }
+    .navbar-nav .nav-link {
+      font-size: 1.12rem;
+      margin: 0.4em 0;
+      padding: 0.8em 1.2em;
+      border-radius: 2em;
+    }
+    .navbar-nav .nav-link:not(:last-child) {
+      border-bottom: 1px solid #ececec;
+    }
+  }
+</style> 
