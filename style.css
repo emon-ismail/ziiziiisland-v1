@@ -1019,6 +1019,16 @@ body {
 }
 
 /* ===== MENU ===== */
+.nav-pills {
+    padding-left: 1rem !important;
+    margin-left: 0 !important;
+    border-radius: 0 !important;
+}
+
+.nav-pills .nav-item:first-child {
+    margin-left: 30vw !important;
+}
+
 .nav-pills .nav-link {
     border-radius: 25px;
     margin: 0 0.5rem;
@@ -1031,6 +1041,7 @@ body {
 .nav-pills .nav-link.active {
     background: var(--gradient-primary);
     color: white;
+    
 }
 
 .nav-pills .nav-link:hover {
