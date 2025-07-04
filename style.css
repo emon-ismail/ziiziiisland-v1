@@ -488,7 +488,7 @@ body {
 }
 
 .hero-subtitle-text {
-    background: linear-gradient(45deg, #ffe66d, #ff6b9d);
+    background: linear-gradient(45deg, #f8d733, #a03f60);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1121,9 +1121,9 @@ body {
 }
 
 .menu-item .price {
-    color: var(--primary-color);
-    font-weight: 700;
-    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.0rem;
 }
 
 /* ===== GALLERY ===== */

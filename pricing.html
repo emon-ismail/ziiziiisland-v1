@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | Zii Zii Island</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+    }
+    .pricing-section {
+      padding: 3rem 0 4rem 0;
+      position: relative;
+      z-index: 1;
+    }
+    .pricing-glass {
+      background: rgba(255,255,255,0.85);
+      border-radius: 2rem;
+      box-shadow: 0 8px 32px 0 rgba(90,79,207,0.10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 2.5px solid;
+      border-image: linear-gradient(120deg, #ffb347 0%, #5a4fcf 100%) 1;
+      padding: 2.5rem 1.5rem 2rem 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: visible;
+      transition: box-shadow 0.2s, transform 0.2s;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .pricing-glass:hover {
+      box-shadow: 0 16px 40px 0 rgba(90,79,207,0.18);
+      transform: translateY(-6px) scale(1.02);
+    }
+    .branch-header {
+      font-size: 2rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, #ff6f61 0%, #5a4fcf 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.7em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      margin-top: 80px;
+    }
+    .branch-header i {
+      font-size: 1.3em;
+      filter: drop-shadow(0 2px 6px #ff6f61aa);
+    }
+    .pricing-img-circle {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 24px rgba(90,79,207,0.13);
+      position: absolute;
+      top: -55px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      z-index: 2;
+      margin-bottom: 0;
+    }
+    .pricing-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #5a4fcf;
+      margin-top: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .pricing-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      width: 100%;
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1.7rem;
+    }
+    .pricing-list li {
+      font-size: 1.08rem;
+      margin-bottom: 0.7em;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      background: #f8f9fa;
+      border-radius: 1em;
+      padding: 0.5em 1em;
+      border: 1px solid #e0e3ea;
+      box-shadow: 0 1px 2px rgba(90,79,207,0.04);
+    }
+    .pricing-list li i {
+      color: #5a4fcf;
+      font-size: 1.1em;
+    }
+    .super-saver-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #ffe082 0%, #ffb347 100%);
+      color: #b26a00;
+      font-weight: 700;
+      border-radius: 1em;
+      padding: 0.2em 1em;
+      font-size: 0.95em;
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
+      box-shadow: 0 2px 8px rgba(255,193,7,0.10);
+    }
+    .super-saver {
+      background: #f8f9fa;
+      border-radius: 1em;
+      padding: 1em 1em 0.7em 1em;
+      margin-bottom: 1.2em;
+      border: 1.5px solid #ffe082;
+      box-shadow: 0 2px 8px rgba(90,79,207,0.07);
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .super-saver-title {
+      font-weight: 600;
+      color: #ff9800;
+      margin-bottom: 0.2em;
+      font-size: 1.08em;
+    }
+    .super-saver-save {
+      color: #43a047;
+      font-weight: 600;
+      font-size: 0.98em;
+    }
+    .pricing-cols {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+    .pricing-col {
+      min-width: 320px;
+      max-width: 430px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 991px) {
+      .pricing-cols {
+        flex-direction: column !important;
+        gap: 2.5rem 0;
+      }
+      .pricing-col {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+    @media (max-width: 767px) {
+      .pricing-glass {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+        min-height: 0;
+      }
+      .branch-header {
+        font-size: 1.2rem;
+        margin-top: 50px;
+      }
+      .pricing-title {
+        font-size: 1rem;
+        margin-top: 1.1rem;
+      }
+      .pricing-img-circle {
+        width: 60px;
+        height: 60px;
+        top: -30px;
+      }
+      .finlay-extra {
+        margin-top: 1.1rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .finlay-extra {
+      margin-top: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <section class="pricing-section">
+    <div class="container">
+      <div class="row text-center mb-5">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title gradient-text mb-3">Check our Ticket Pricing</h2>
+          <p class="section-subtitle">Compare ticket and playzone rates for each branch</p>
+        </div>
+      </div>
+      <div class="pricing-cols">
+      
+        <!-- Khulshi Branch -->
+        <div class="pricing-col">
+          <div class="pricing-glass h-100 d-flex flex-column align-items-center">
+            <img src="/khulshi_package/cover.jpg" alt="Mysterious Island" class="pricing-img-circle" />
+            <div class="branch-header"><i class="fas fa-map-marker-alt"></i> Khulshi Branch</div>
+            <div class="pricing-title">Mysterious Island (Kids Play Zone)<br><small class="text-muted">(valid for 1.5 hours)</small></div>
+            <ul class="pricing-list">
+              <li><i class="fas fa-ticket-alt"></i> Regular Entry Fee: Tk 390 for 1.5 hours</li>
+            </ul>
+            <div class="pricing-title mt-4">Alpha Station (VR & Games Zone)</div>
+            <span class="super-saver-badge">Best Value</span>
+            <div class="super-saver">
+              <div class="super-saver-title"><i class="fas fa-coins"></i> Each Coin: <b>Tk 50</b></div>
+            </div>
+            <div class="super-saver">
+              <div class="super-saver-title">Super Saver 1: <b>25 Coins</b> <span class="ms-2">Tk 1000</span></div>
+              <div class="super-saver-save">Save Tk 250</div>
+            </div>
+            <div class="super-saver">
+              <div class="super-saver-title">Super Saver 2: <b>40 Coins</b> <span class="ms-2">Tk 1500</span></div>
+              <div class="super-saver-save">Save Tk 500</div>
+            </div>
+            <div class="super-saver">
+              <div class="super-saver-title">Super Saver 3: <b>55 Coins</b> <span class="ms-2">Tk 2000</span></div>
+              <div class="super-saver-save">Save Tk 750</div>
+            </div>
+            <div class="super-saver">
+              <div class="super-saver-title">Super Saver 4: <b>70 Coins</b> <span class="ms-2">Tk 2500</span></div>
+              <div class="super-saver-save">Save Tk 1000</div>
+            </div>
+            <div class="super-saver">
+              <div class="super-saver-title">Super Saver 5: <b>85 Coins</b> <span class="ms-2">Tk 3000</span></div>
+              <div class="super-saver-save">Save Tk 1250</div>
+            </div>
+            <div class="super-saver">
+              <div class="super-saver-title">Super Saver 6: <b>100 Coins</b> <span class="ms-2">Tk 3250</span></div>
+              <div class="super-saver-save">Save Tk 1750</div>
+            </div>
+          </div>
+        </div>
+  <!-- Finlay Branch -->
+  <div class="pricing-col">
+    <div class="pricing-glass h-100 d-flex flex-column align-items-center">
+      <img src="/finlay_package/cover.jpg" alt="Alpha Station" class="pricing-img-circle" />
+      <div class="branch-header"><i class="fas fa-map-marker-alt"></i> Finlay Branch</div>
+      <div class="pricing-title">Minions Land (Kids Play Zone)<br><small class="text-muted">(valid for 2 hours)</small></div>
+      <ul class="pricing-list">
+        <li><i class="fas fa-child"></i> Tk 500 – 1 Kid + 1 Parent</li>
+        <li><i class="fas fa-children"></i> Tk 900 – 2 Kids + 2 Parents</li>
+        <li><i class="fas fa-children"></i> Tk 1300 – 3 Kids + 2 Parents</li>
+      </ul>
+      <div class="pricing-title mt-4">Infinity Station (VR & Games Zone)</div>
+      <ul class="pricing-list">
+        <li><i class="fas fa-coins"></i> 1 Coin = Tk 50</li>
+        <li><i class="fas fa-gift"></i> Tk 500 – 12 Coins + Entry for 2</li>
+        <li><i class="fas fa-gift"></i> Tk 1000 – 25 Coins + Entry for 3</li>
+        <li><i class="fas fa-user"></i> Tk 100 – Adult Entry + 2 Coins</li>
+        <li><i class="fas fa-couch"></i> Tk 150 – Massage Chair + 1 Entry</li>
+      </ul>
+      <div class="finlay-extra mt-auto mb-3">
+        <h5 class="fw-bold text-primary mb-2" style="font-size:1.1em;">Why Kids Love Zii Zii Island</h5>
+        <ul class="list-unstyled text-secondary small" style="line-height:1.7;">
+          <li><i class="fas fa-shield-alt me-2 text-success"></i>Safe & Clean Environment</li>
+          <li><i class="fas fa-paint-roller me-2 text-warning"></i>Colorful Play Structures</li>
+          <li><i class="fas fa-user-friends me-2 text-info"></i>Friendly Staff</li>
+          <li><i class="fas fa-birthday-cake me-2 text-pink"></i>Perfect for Parties</li>
+          <li><i class="fas fa-smile-beam me-2 text-success"></i>Lots of Smiles Guaranteed!</li>
+        </ul>
+      </div>
+      <img src="/finlay_package/cover.jpg" alt="Alpha Station" class="pricing-img-circle mt-2" />
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
