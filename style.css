@@ -1025,9 +1025,9 @@ body {
     border-radius: 0 !important;
 }
 
-.nav-pills .nav-item:first-child {
+/* .nav-pills .nav-item:first-child {
     margin-left: 30vw !important;
-}
+} */
 
 .nav-pills .nav-link {
     border-radius: 25px;
@@ -2142,5 +2142,11 @@ html {
     padding-right: 0 !important;
     flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-pills .nav-item:first-child {
+    margin-left: 30vw !important;
   }
 } 
