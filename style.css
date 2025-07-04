@@ -76,19 +76,59 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: 700;
+    font-weight: 600;
+   
 }
 
 .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 2.3rem;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.3em;
+    text-shadow: 0 2px 8px rgba(106,17,203,0.08);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #ffb347 0%, #ff5e62 100%);
+    border-radius: 2px;
+    margin: 0.5em auto 0 auto;
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 1.5em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 4px rgba(80,80,80,0.04);
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .section-title::after {
+        width: 40px;
+        height: 3px;
+    }
+    .section-subtitle {
+        font-size: 1rem;
+    }
 }
 
 /* ===== NAVBAR ===== */
