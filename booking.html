@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Visit | Zii Zii Island</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+            min-height: 100vh;
+        }
+        .booking-section {
+            max-width: 600px;
+            margin: 3rem auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(90,79,207,0.10);
+            padding: 2.5rem 2rem;
+        }
+        .booking-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ffb347 0%, #5a4fcf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .form-label {
+            font-weight: 600;
+        }
+        .btn-book {
+            background: linear-gradient(90deg, #ffb347 0%, #5a4fcf 100%);
+            border: none;
+            font-weight: 700;
+            border-radius: 2em;
+            box-shadow: 0 2px 8px rgba(90,79,207,0.10);
+        }
+        .btn-book:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #5a4fcf33;
+        }
+    </style>
+</head>
+<body>
+    <div class="container booking-section">
+        <div class="text-center mb-4">
+            <div class="mb-2">
+                <img src="logo.png" alt="Zii Zii Island Logo" style="height: 60px; border-radius: 10px; box-shadow: 0 2px 8px rgba(90,79,207,0.08);">
+            </div>
+            <h2 class="booking-title mb-2">Book Your Visit</h2>
+            <p class="text-muted">Reserve your spot for a fun-filled day at Zii Zii Island!</p>
+        </div>
+        <form id="bookingForm">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" required autocomplete="name">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-control" name="phone" required autocomplete="tel">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Date</label>
+                    <input type="date" class="form-control" name="date" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Time</label>
+                    <select class="form-select" name="time" required>
+                        <option value="">Select Time</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Branch</label>
+                    <select class="form-select" name="branch" required>
+                        <option value="">Select Branch</option>
+                        <option value="khulshi">Khulshi Branch</option>
+                        <option value="bohaddarhat">Bohaddarhat Branch</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Package</label>
+                    <select class="form-select" name="package" required>
+                        <option value="">Select Package</option>
+                        <option value="family">Family Fun</option>
+                        <option value="birthday">Birthday Bash</option>
+                        <option value="premium">Premium Party</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Number of People</label>
+                    <input type="number" class="form-control" name="people" min="1" required>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Special Requests</label>
+                    <textarea class="form-control" name="requests" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="mt-4 text-center">
+                <button type="submit" class="btn btn-book btn-lg px-5">Confirm Booking</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Booking Form Logic -->
+    <script src="google-apps-script.js"></script>
+</body>
+</html> 

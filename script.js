@@ -34,7 +34,7 @@ function initializeWebsite() {
     initTypingAnimation();
     initFormValidation();
     initBackToTop();
-    initParallaxEffects();
+    // initParallaxEffects(); // Commented out to prevent ReferenceError
     initBranchSelection();
 }
 
@@ -99,6 +99,8 @@ function initNavbar() {
             });
         }
     });
+    
+
 
     // Add scrolled class styles
     const style = document.createElement('style');
@@ -226,15 +228,14 @@ function initTypingAnimation() {
 // ===== FORM VALIDATION =====
 function initFormValidation() {
     const forms = document.querySelectorAll('form');
-    
     forms.forEach(form => {
+        // Skip booking form, it has its own validation and submission logic
+        if (form.id === 'bookingForm') return;
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
             // Basic validation
             const requiredFields = form.querySelectorAll('[required]');
             let isValid = true;
-            
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     isValid = false;
@@ -243,9 +244,7 @@ function initFormValidation() {
                     field.classList.remove('is-invalid');
                 }
             });
-            
             if (isValid) {
-                // Show success message
                 showNotification('Form submitted successfully!', 'success');
                 form.reset();
             } else {
@@ -689,37 +688,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ===== GOOGLE SHEETS BOOKING SUBMISSION =====
-document.addEventListener('DOMContentLoaded', function() {
-  var bookingForm = document.getElementById('bookingForm');
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var form = e.target;
-      var data = {
-        name: form.querySelector('[name="name"]').value,
-        phone: form.querySelector('[name="phone"]').value,
-        date: form.querySelector('[name="date"]').value,
-        time: form.querySelector('[name="time"]').value,
-        branch: form.querySelector('[name="branch"]').value,
-        package: form.querySelector('[name="package"]').value,
-        people: form.querySelector('[name="people"]').value,
-        requests: form.querySelector('[name="requests"]').value
-      };
-      fetch('https://script.google.com/macros/s/AKfycbwo2Mr1h5tjbu8PSlNdK4_XbQrYdGn5Y9NBnF6BgYBKTzT0dSET8lJ6h33xGxbkp68lFw/exec', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {'Content-Type': 'application/json'}
-      })
-      .then(res => res.json())
-      .then(res => {
-        if (res.result === 'success') {
-          alert('Booking confirmed!');
-          form.reset();
-        } else {
-          alert('There was an error. Please try again.');
-        }
-      })
-      .catch(() => alert('There was an error. Please try again.'));
-    });
-  }
-}); 
+// (Booking form logic is now in google-apps-script.js) 
